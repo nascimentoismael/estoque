@@ -1,0 +1,3 @@
+com/mycompany/estoque/model/Item.class
+com/mycompany/estoque/model/Fornecedor.class
+com/mycompany/estoque/banco/ConnectionFactory.class

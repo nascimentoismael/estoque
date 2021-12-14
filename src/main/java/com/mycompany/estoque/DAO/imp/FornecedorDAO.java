@@ -11,6 +11,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -107,7 +109,7 @@ public class FornecedorDAO implements IGenericsDAO<Fornecedor, Integer> {
         
         ArrayList<Fornecedor> lista = new ArrayList<>();
         
-        while (!rs.isAfterLast()) {
+        while (!rs.next()) {
             Fornecedor f = new Fornecedor(
             rs.getInt("id"),
             rs.getString("nome"),
@@ -119,5 +121,4 @@ public class FornecedorDAO implements IGenericsDAO<Fornecedor, Integer> {
         
         return lista;
     }
-    
 }

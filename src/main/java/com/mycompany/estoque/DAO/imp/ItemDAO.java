@@ -105,7 +105,7 @@ public class ItemDAO implements IGenericsDAO<Item, Integer>{
         
         Connection c = ConnectionFactory.getConnection();
         
-        String sql = "SELECT i.*, f.*\n" +
+        String sql = "SELECT i.*, f.nome\n" +
                      "FROM item i\n" +
                      "JOIN fornecedor f ON i.id_fornecedor = f.id";
         
